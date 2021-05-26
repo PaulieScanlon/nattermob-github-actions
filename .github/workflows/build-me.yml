@@ -8,7 +8,7 @@ jobs:
   Trigger-Build:
     runs-on: ubuntu-latest
     steps:
-     - name: Set Env
+      - name: Set Env
         env:
           GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
       - name: Make Post
