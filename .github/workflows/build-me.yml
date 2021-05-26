@@ -2,7 +2,7 @@ name: Build Site
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/59 * * * *'
 
 jobs:
   Trigger-Build:
