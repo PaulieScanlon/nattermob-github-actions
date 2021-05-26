@@ -5,7 +5,7 @@ exports.sourceNodes = ({ actions: { createNode }, createContentDigest }) => {
   const secs = date.getSeconds();
 
   const timestamp = `h:${hours} | m:${mins} | s:${secs}`;
-  // console.log('//// timestamp: ', timestamp);
+  console.log('//// timestamp: ', timestamp);
   createNode({
     timestamp: timestamp,
     id: '123',
