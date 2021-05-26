@@ -11,6 +11,6 @@ jobs:
         id: myRequest
         uses: fjogeleit/http-request-action@master
         with:
-          url: "https://webhook.gatsbyjs.com/hooks/data_source/publish/d09e0864-7d41-4b7a-b114-4cf3a6800cda"
+          url: 'https://webhook.gatsbyjs.com/hooks/data_source/publish/d09e0864-7d41-4b7a-b114-4cf3a6800cda'
       - name: Show Response
-          run: echo ${{ steps.myRequest.outputs.response }}
+        run: echo ${{ steps.myRequest.outputs.response }}
