@@ -8,12 +8,11 @@ jobs:
   Trigger-Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set Env
-        env:
-          GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
-      - name: Make Post
-        id: rebuildSite
+      - name: Call Gatsby Cloud Webhook
+        id: rebuild
         uses: fjogeleit/http-request-action@master
         with:
           url: ${{secrets.GATSBY_WEBHOOK}}
           method: 'POST'
+      env:
+      GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
