@@ -14,5 +14,5 @@ jobs:
         with:
           url: ${{secrets.GATSBY_WEBHOOK}}
           method: 'POST'
-      env:
-      GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
+        env:
+        GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
