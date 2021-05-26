@@ -17,6 +17,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "🏴‍☠️ This is the Gatsby Webhook URL ${{ secrets.GATSBY_WEBHOOK }}"
-       env:
-          GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
