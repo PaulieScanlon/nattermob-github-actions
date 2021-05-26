@@ -1,7 +1,9 @@
-name: Build Site
-on: [push]
+name: Build every 5 minutes
+on:
+  schedule:
+    - cron: '*/5 * * * *'
 jobs:
-  Explore-GitHub-Actions:
+  Do-Some-Things:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
