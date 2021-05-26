@@ -4,6 +4,7 @@ jobs:
   Log-Secret:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 Gatsby Webhook url ${{secrets.GATSBY_WEBHOOK}} event."
+      - run: echo "1 Gatsby Webhook url ${{ secrets.GATSBY_WEBHOOK }}"
         env:
           GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
+      - run: echo "2 Gatsby Webhook url ${{ secrets.GATSBY_WEBHOOK }}"
