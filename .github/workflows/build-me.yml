@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set Env
-        - run: echo "set env using GATSBY_WEBHOOK"
-          env:
-            GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
+      - run: echo "set env using GATSBY_WEBHOOK"
+        env:
+        GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
       - name: Post to Gatsby Cloud Webhook
         id: rebuild
         uses: fjogeleit/http-request-action@master
