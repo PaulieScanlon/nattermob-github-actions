@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: '*/5 * * * *'
 jobs:
-  Do-Something:
+  Do-Some-Things:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
