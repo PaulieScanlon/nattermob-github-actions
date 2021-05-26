@@ -2,16 +2,17 @@ name: Build Site
 on:
   schedule:
     - cron: '*/5 * * * *'
-  jobs:
-    Trigger-Build:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Gatsby Webhook url ${{ secrets.GATSBY_WEBHOOK }}"
-          env:
-            GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
-        - name: Make Post
-          id: rebuildSite
-          uses: fjogeleit/http-request-action@master
-          with:
-            url: 'https://webhook.gatsbyjs.com/hooks/data_source/publish/d09e0864-7d41-4b7a-b114-4cf3a6800cda'
-            method: 'POST'
+
+jobs:
+  Trigger-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Gatsby Webhook url ${{ secrets.GATSBY_WEBHOOK }}"
+        env:
+          GATSBY_WEBHOOK: ${{secrets.GATSBY_WEBHOOK}}
+      - name: Make Post
+        id: rebuildSite
+        uses: fjogeleit/http-request-action@master
+        with:
+          url: 'https://webhook.gatsbyjs.com/hooks/data_source/publish/d09e0864-7d41-4b7a-b114-4cf3a6800cda'
+          method: 'POST'
